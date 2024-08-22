@@ -18,7 +18,7 @@ RUN go build -o retrodep-bin ./main.go
 
 # Use ubi-minimal as minimal base image to package the manager binary
 # Refer to https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8 for more details
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.6-751
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.10-1052
 COPY --from=builder /opt/app-root/src/retrodep-bin /
 
 ENTRYPOINT ["/retrodep-bin"]
