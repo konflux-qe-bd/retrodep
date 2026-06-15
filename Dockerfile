@@ -1,5 +1,5 @@
 # Build the manager binary
-FROM registry.access.redhat.com/ubi8/go-toolset:1.17 as builder
+FROM registry.access.redhat.com/ubi8/go-toolset:1.25.10-1781041461 as builder
 
 # Check if the build is performed in hermetic environment
 # (without access to the internet)
